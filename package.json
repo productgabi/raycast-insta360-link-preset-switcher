@@ -1,0 +1,91 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "raycast-insta360-link-preset-switcher",
+  "title": "Insta360 Link Preset Switcher",
+  "description": "Switch Insta360 Link scene presets (pan/tilt/zoom framing) from Raycast.",
+  "icon": "icon.png",
+  "author": "productgabi",
+  "license": "MIT",
+  "platforms": ["macOS"],
+  "categories": ["Productivity"],
+  "commands": [
+    {
+      "name": "switch-preset",
+      "title": "Switch Webcam Preset",
+      "subtitle": "Insta360 Link",
+      "description": "Pick a saved framing and move the camera to it. Also capture, edit, and delete presets.",
+      "mode": "view"
+    },
+    {
+      "name": "apply-slot-1",
+      "title": "Apply Webcam Preset 1",
+      "subtitle": "Slot 1",
+      "description": "Apply the 1st saved preset. Assign a global hotkey to this command.",
+      "mode": "no-view"
+    },
+    {
+      "name": "apply-slot-2",
+      "title": "Apply Webcam Preset 2",
+      "subtitle": "Slot 2",
+      "description": "Apply the 2nd saved preset. Assign a global hotkey to this command.",
+      "mode": "no-view"
+    },
+    {
+      "name": "apply-slot-3",
+      "title": "Apply Webcam Preset 3",
+      "subtitle": "Slot 3",
+      "description": "Apply the 3rd saved preset. Assign a global hotkey to this command.",
+      "mode": "no-view"
+    },
+    {
+      "name": "apply-slot-4",
+      "title": "Apply Webcam Preset 4",
+      "subtitle": "Slot 4",
+      "description": "Apply the 4th saved preset. Assign a global hotkey to this command.",
+      "mode": "no-view"
+    },
+    {
+      "name": "apply-slot-5",
+      "title": "Apply Webcam Preset 5",
+      "subtitle": "Slot 5",
+      "description": "Apply the 5th saved preset. Assign a global hotkey to this command.",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "uvcUtilPath",
+      "title": "uvc-util Path",
+      "description": "Absolute path to the uvc-util binary (Raycast does not inherit your shell PATH).",
+      "type": "textfield",
+      "required": false,
+      "default": "/usr/local/bin/uvc-util"
+    },
+    {
+      "name": "cameraName",
+      "title": "Camera Name",
+      "description": "The UVC device name to control, as shown by `uvc-util -d`.",
+      "type": "textfield",
+      "required": false,
+      "default": "Insta360 Link"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.79.0",
+    "@raycast/utils": "^1.16.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
